@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fafafa;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .game-container {
+            display: inline-block;
+            background-color: #bbada0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 80px);
+            grid-template-rows: repeat(4, 80px);
+            gap: 10px;
+        }
+        .tile {
+            width: 80px;
+            height: 80px;
+            background-color: #cdc1b4;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #776e65;
+        }
+        .tile[data-value="2"] { background-color: #eee4da; color: #776e65; }
+        .tile[data-value="4"] { background-color: #ede0c8; color: #776e65; }
+        .tile[data-value="8"] { background-color: #f2b179; color: white; }
+        .tile[data-value="16"] { background-color: #f59563; color: white; }
+        .tile[data-value="32"] { background-color: #f67c5f; color: white; }
+        .tile[data-value="64"] { background-color: #f65e3b; color: white; }
+        .tile[data-value="128"] { background-color: #edcf72; color: white; }
+        .tile[data-value="256"] { background-color: #edcc61; color: white; }
+        .tile[data-value="512"] { background-color: #edc850; color: white; }
+        .tile[data-value="1024"] { background-color: #edc53f; color: white; }
+        .tile[data-value="2048"] { background-color: #edc22e; color: white; }
+
+        .score-container {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>2048 Game</h1>
+    <div class="game-container">
+        <div class="grid" id="grid"></div>
+    </div>
+    <div class="score-container">Score: <span id="score">0</span></div>
+
+    <script src="2048game基础版本.js"></script>
+</body>
+</html>
